@@ -9,14 +9,14 @@ def get_numbers_ticket(min, max, quantity):
         numbers = random.sample(range(min, max), quantity)
     elif min > max:
         print("Вказано не вірне значення MIN")
-        return None
+        return numbers
     elif not (0<quantity <=(max-min)):
         print("Вказано не вірне значення QUANITY")
-        return None
+        return numbers
         
     # sorting
     numbers.sort()
     return numbers
     
-lottery_numbers = get_numbers_ticket(4, 8, 4)
+lottery_numbers = get_numbers_ticket(10, 4, 4)
 print("Ваші лотерейні числа:", lottery_numbers)
